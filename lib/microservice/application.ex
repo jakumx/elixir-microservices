@@ -14,7 +14,6 @@ defmodule Microservice.Application do
       supervisor(MicroserviceWeb.Endpoint, []),
       # Start your own worker by calling: Microservice.Worker.start_link(arg1, arg2, arg3)
       # worker(Microservice.Worker, [arg1, arg2, arg3]),
-      worker(Redix, [[host: "redis"], [name: :redix]])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

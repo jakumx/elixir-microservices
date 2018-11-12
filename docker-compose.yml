@@ -14,26 +14,9 @@ services:
   web:
     build: .
     container_name: elixir_micro
-    command: bash -c "mix ecto.create && mix ecto.migrate && mix phx.server"
+    command: bash -c "mix phx.server"
     volumes:
       - .:/opt/application
     ports:
       - 4000:4000
     restart: always
-    depends_on:
-      - redis
-      - postgres
-  redis:
-    image: redis
-    container_name: redis_micro
-    ports:
-      - 6379:6379
-  postgres:
-    image: postgres
-    container_name: postgres_micro
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: microservice_dev

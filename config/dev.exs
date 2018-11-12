@@ -39,8 +39,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :microservice, Microservice.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "microservice_dev",
-  hostname: "postgres_micro",
+  username: "root",
+  password: "password",
+  database: "database",
+  hostname: "hostname",
   pool_size: 10

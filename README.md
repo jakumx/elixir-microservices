@@ -4,8 +4,6 @@ A basic microservice
 
 with:
 * elixir
-* postgres
-* redis
 * nginx
 
 ## requirements
